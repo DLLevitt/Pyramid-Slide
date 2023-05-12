@@ -3,7 +3,7 @@
 <head>
   <style>
     #pyramid {
-      line-hieght: 0;
+      line-height: 0;
       font-size: 30px;
     }
     body {
@@ -11,7 +11,6 @@
       text-align: center;
     }  
   </style>
-
 </head>
 <body>
   <h1>Mario 3</h1>
@@ -20,10 +19,17 @@
   <p><strong>Draw a pyramid</strong></p>
   <p>I say:</p>
   <br>
-  <label>How High?</label>
-  <input type="text" id="height"/>
+  <label for="height">How High?</label>
+  <input type="range" id="height-slider" name="height" min="1" max="20" value="1">
+  <span id="slider-value">1</span>
   <br><br>
-  <button id="myButton" onclick="determineHeightAndThenDrawPyramid()">Draw a pyramid</button>
+  <label for="characters">Choose characters:</label>
+  <select id="characters" name="characters">
+    <option value="#">#</option>
+    <option value="$">$</option>
+    <option value="X">X</option>
+    <option value="@">@</option>
+  </select>
   <br><br>
   <h3>Behold this wonderful pyramid:</h3>
   <div id="pyramid"></div>
